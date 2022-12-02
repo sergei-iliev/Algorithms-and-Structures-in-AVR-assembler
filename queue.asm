@@ -1,15 +1,13 @@
 /***************************************************QUEUE 8/16 bit******************************************************************
-8 bit queue
+8/16 queue
 
-memory structure
+8 bit memory structure
 1.byte - head index points to next occupied slot to be read,starts from 0 index
 1.byte - tail index points to next free slot to be written, starts from 0 index
 1.byte - counter to measure current size
 N < 256 size byte array (each element 1 byte long)
 
-16 bit queue
-
-memory structure
+16 bit memory structure
 2.byte - head index points to next occupied slot to be read,starts from 0 index
 2.byte - tail index points to next free slot to be written, starts from 0 index
 2.byte - counter to measure current size
@@ -107,7 +105,7 @@ que16enq_0:
 ret
 /*************************dequeue************************
 @INPUT: Z - queue pointer 
-		axl - length of backing static array
+		axl,axh - length of backing static array
 @USAGE: bxl,bxh,r0,r1,r2,r3			
 @OUTPUT: T flag 0 - failure
 				1 - success

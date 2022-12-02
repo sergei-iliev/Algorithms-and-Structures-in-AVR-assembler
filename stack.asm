@@ -1,14 +1,13 @@
 /*
-8 bits stack
+8/16 stack
 
-memory structure
+
+8 bit  memory structure
 1.byte - index to next free 1 byte slot,starts from 0 index
 N size byte array (each element 1 byte long)
 N < 256 size byte array (each element 1 byte long)
 
-16 bits stack
-
-memory structure
+16 bit memory structure
 2.byte - index to next free 2 byte slot, starts from 0 index
 N size byte array (each element 2 bytes long)
 0<N < 2^16  size byte array (each element 2 byte long MSB:LSB order)
