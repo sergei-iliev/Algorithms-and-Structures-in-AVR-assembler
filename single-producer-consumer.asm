@@ -9,7 +9,9 @@ The lock-free nature of the queue enables two thread communication from a single
 The power of wait-free and lock-free together makes this type of circular queue attractive in a range of areas, from interrupt and signal handlers to real-time systems or other time sensitive software.
 There is one index position unused to mark full queue
 https://www.codeproject.com/Articles/43510/Lock-Free-Single-Producer-Single-Consumer-Circular
+*/
 
+/*
 8 bit memory structure
 1.byte - head index points to next occupied slot to be read,starts from 0 index
 1.byte - tail index points to next free slot to be written, starts from 0 index
@@ -19,6 +21,13 @@ N < 256 size byte array (each element 1 byte long)
 #define HEAD_OFFSET 0
 #define TAIL_OFFSET 1
 #define BUFFER_OFFSET 2
+
+/*
+16 bit memory structure
+2.byte - head index points to next occupied slot to be read,starts from 0 index
+2.byte - tail index points to next free slot to be written, starts from 0 index
+N < 2^16 size byte array (each element 2 bytes long)
+*/
 
 #define HEAD_OFFSET16 0
 #define TAIL_OFFSET16 2
